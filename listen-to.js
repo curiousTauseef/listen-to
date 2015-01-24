@@ -30,7 +30,7 @@ program
   .version('0.0.0')
   .command('listen-to <title>')
   .action(function (title) {
-    var video = youtubedl('http://www.youtube.com/watch?v=90AiXO1pAiA', ['--extract-audio']);
+    var video = youtubedl(searchMusic(title), ['--extract-audio']);
 
     video.on('info', function(info) {
       console.log('Download started');
