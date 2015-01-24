@@ -39,14 +39,14 @@ program
         console.log('size: ' + info.size);
       });
 
-      video.pipe(fs.createWriteStream('song.mp3'));
+      video.pipe(fs.createWriteStream('temp.mp3'));
 
-      var player = new Player('./song.mp3');
+      var player = new Player('./temp.mp3');
       player.play(function(err, player){
         console.log('end!');
-      });
+      });q
 
-      del(['song.mp3'], function (err, deletedFiles) {
+      del(['temp.mp3'], function (err, deletedFiles) {
         console.log('Deleted ', deletedFiles.join(', '));
       });
     });
