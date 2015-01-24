@@ -19,6 +19,9 @@ program
 
     video.pipe(fs.createWriteStream('song.mp3'));
     var player = new Player('./song.mp3');
+    player.play(function(err, player){
+      console.log('end!');
+    });
   });
 
 program.parse(process.argv);
