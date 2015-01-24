@@ -16,7 +16,7 @@ program
       console.log('size: ' + info.size);
     });
 
-    video.pipe(fs.createWriteStream('myvideo.mp4'));
+    video.pipe(fs.createWriteStream('song.mp4'));
   });
 
 program.parse(process.argv);
