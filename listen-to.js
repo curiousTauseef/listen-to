@@ -19,10 +19,12 @@ program
     });
 
     video.pipe(fs.createWriteStream('song.mp3'));
+
     var player = new Player('./song.mp3');
     player.play(function(err, player){
       console.log('end!');
     });
+
     del(['song.mp3'], function (err, deletedFiles) {
       console.log('Deleted ', deletedFiles.join(', '));
     });
