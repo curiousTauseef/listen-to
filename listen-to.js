@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-var program = require('commander');
-var fs = require('fs');
-var youtubedl = require('youtube-dl');
-var Player = require('player');
 var del = require('del');
+var fs = require('fs');
+var Player = require('player');
+var program = require('commander');
+var youtubedl = require('youtube-dl');
 
 program
   .version('0.0.0')
