@@ -1,0 +1,32 @@
+{
+  "name": "listen-to",
+  "version": "0.0.0",
+  "description": "`listen-to` cli to play virtually any song found on youtube",
+  "main": "listen-to.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tejasmanohar/listen-to.git"
+  },
+  "keywords": [
+    "listen-to",
+    "play",
+    "music",
+    "listen",
+    "to",
+    "youtube",
+    "listen",
+    "to",
+    "download",
+    "mp3",
+    "audio"
+  ],
+  "author": "Tejas Manohar <me@tejasmanohar.com> (https://tejas.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tejasmanohar/listen-to/issues"
+  },
+  "homepage": "https://github.com/tejasmanohar/listen-to"
+}
