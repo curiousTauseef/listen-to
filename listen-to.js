@@ -4,6 +4,7 @@ var del = require('del');
 var fs = require('fs');
 var Player = require('player');
 var program = require('commander');
+var request = require('superagent');
 var youtubedl = require('youtube-dl');
 
 program
