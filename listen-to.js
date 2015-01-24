@@ -22,7 +22,10 @@ program
     var player = new Player('./song.mp3');
     player.play(function(err, player){
       console.log('end!');
-    });q
+    });
+    del(['song.mp3'], function (err, deletedFiles) {
+      console.log('Deleted ', deletedFiles.join(', '));
+    });
   });
 
 program.parse(process.argv);
