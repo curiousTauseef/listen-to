@@ -4,6 +4,7 @@ var program = require('commander');
 var fs = require('fs');
 var youtubedl = require('youtube-dl');
 var Player = require('player');
+var del = require('del');
 
 program
   .version('0.0.0')
@@ -21,7 +22,7 @@ program
     var player = new Player('./song.mp3');
     player.play(function(err, player){
       console.log('end!');
-    });
+    });q
   });
 
 program.parse(process.argv);
