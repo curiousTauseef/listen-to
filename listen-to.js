@@ -30,23 +30,25 @@ program
   .version('0.0.0')
   .command('listen-to <title>')
   .action(function (title) {
-    var video = youtubedl(searchMusic(title), ['--extract-audio']);
+    searchMusic(title, function(url) {
+      var video = youtubedl(searchMusic(url), ['--extract-audio']);
 
-    video.on('info', function(info) {
-      console.log('Download started');
-      console.log('filename: ' + info.filename);
-      console.log('size: ' + info.size);
-    });
+      video.on('info', function(info) {
+        console.log('Download started');
+        console.log('filename: ' + info.filename);
+        console.log('size: ' + info.size);
+      });
 
-    video.pipe(fs.createWriteStream('song.mp3'));
+      video.pipe(fs.createWriteStream('song.mp3'));
 
-    var player = new Player('./song.mp3');
-    player.play(function(err, player){
-      console.log('end!');
-    });
+      var player = new Player('./song.mp3');
+      player.play(function(err, player){
+        console.log('end!');
+      });
 
-    del(['song.mp3'], function (err, deletedFiles) {
-      console.log('Deleted ', deletedFiles.join(', '));
+      del(['song.mp3'], function (err, deletedFiles) {
+        console.log('Deleted ', deletedFiles.join(', '));
+      });
     });
   });
 
